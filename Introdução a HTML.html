@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Introdução a HTML</title>
+	<meta name="description" content="Conheça a liguagem de marcação HTML e entenda como utiliza-la para desenvolvimento de página Web.">
+	<link rel="stylesheet" href="./Introdução a HTML_files/reset.css">
+	<link rel="stylesheet" href="./Introdução a HTML_files/reveal.css">
+	<link rel="stylesheet" href="./Introdução a HTML_files/white.css" id="theme">
+	<link rel="stylesheet" href="./Introdução a HTML_files/atom-one-light.css" id="code-theme">
+	<link rel="stylesheet" href="./Introdução a HTML_files/custom.css">
+	<script type="text/javascript" src="./Introdução a HTML_files/marked.js.download"></script><script type="text/javascript" src="./Introdução a HTML_files/markdown.js.download"></script><script type="text/javascript" src="./Introdução a HTML_files/highlight.js.download"></script><style type="text/css" id="operaUserStyle"></style><link rel="stylesheet" type="text/css" href="./Introdução a HTML_files/paper.css"><style type="text/css"></style><script type="text/javascript" src="./Introdução a HTML_files/search.js.download"></script><script type="text/javascript" src="./Introdução a HTML_files/zoom.js.download"></script><script type="text/javascript" src="./Introdução a HTML_files/notes.js.download"></script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+
+<body style="transition: -webkit-transform 0.8s;">
+	<div class="reveal slide center has-horizontal-slides has-dark-background ready" role="application" data-transition-speed="default" data-background-transition="fade" style="">
+		<div class="settings">
+			<button class="btn-print" onclick="printPDF()">
+				<img src="./Introdução a HTML_files/print.svg" alt="print">
+			</button>
+			<button class="change-theme" onclick="changeTheme()">
+				<img src="./Introdução a HTML_files/color.svg" alt="color">
+			</button>
+		</div>
+		<div class="slides" style="width: 960px; height: 700px; zoom: 1.29737;">
+			<section data-background="#4d7e65" class="has-dark-background present" style="top: 177px; display: block;">
+				<h1 class="text-title">Introdução a HTML</h1>
+				<p class="text-autor">
+					Prof. Rêmulo Borges 
+				</p>
+				
+			</section>
+
+			<section data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" style="top: 192.5px; display: block;"><h1 id="objetivos">Objetivos</h1>
+<p>Conhecer a liguagem de marcação HTML e 
+entender como utiliza-la para desenvolvimento de página Web.</p>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" style="top: 215px; display: block;"><h2 id="contexto">Contexto</h2>
+<p>Web: documentos em hipermídia que podem ser interligados</p>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;"><h2 id="problema">Problema</h2>
+<p>Um formato de documento que permita adicionar texto,
+imagens, vídeos, etc de forma padronizada o mais simples possível e
+que possam ser interligados.</p>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;"><h1 id="hypertext-markup-language---html">Hypertext Markup Language - HTML</h1>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;"><h2 id="html">HTML</h2>
+<p>É uma linguagem de marcação, formada por um conjunto de <strong><em>tags</em></strong></p>
+</section>
+
+			<section hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;">
+				<h3>Estrutua básica de uma Página HTML</h3>
+				<pre><code class="html hljs xml has-highlights" data-trim="" data-line-numbers="1"><table class="hljs-ln"><tbody><tr class="highlight-line"><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">   <span class="hljs-comment">&lt;!--configurações da página (não é vísivel)--&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">   <span class="hljs-comment">&lt;!--conteúdo visível da página --&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></div></td></tr></tbody></table></code><code class="html hljs xml fragment has-highlights" data-trim="" data-line-numbers="2,10" data-fragment-index="0"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span></div></td></tr><tr class="highlight-line"><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">   <span class="hljs-comment">&lt;!--configurações da página (não é vísivel)--&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">   <span class="hljs-comment">&lt;!--conteúdo visível da página --&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></div></td></tr><tr class="highlight-line"><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></div></td></tr></tbody></table></code><code class="html hljs xml fragment has-highlights" data-trim="" data-line-numbers="3-5" data-fragment-index="1"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></div></td></tr><tr class="highlight-line"><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span></div></td></tr><tr class="highlight-line"><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">   <span class="hljs-comment">&lt;!--configurações da página (não é vísivel)--&gt;</span></div></td></tr><tr class="highlight-line"><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">   <span class="hljs-comment">&lt;!--conteúdo visível da página --&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></div></td></tr></tbody></table></code><code class="html hljs xml fragment has-highlights" data-trim="" data-line-numbers="7-9" data-fragment-index="2"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">   <span class="hljs-comment">&lt;!--configurações da página (não é vísivel)--&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr class="highlight-line"><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></div></td></tr><tr class="highlight-line"><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">   <span class="hljs-comment">&lt;!--conteúdo visível da página --&gt;</span></div></td></tr><tr class="highlight-line"><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></div></td></tr></tbody></table></code></pre>
+			</section>
+
+			<section data-background="#61BC88" class="has-light-background future" hidden="" aria-hidden="true" style="top: 350px; display: none;">
+				<h3>Exemplo de página Web</h3>
+				<div class="web-page">
+						<h5>Projeto Supervisionado</h5>
+						<small>Disciplina do módulo curso do Técnico em Desenvolvimento de Sistemas
+							 do SESI - Planalto</small>
+				</div>
+			</section>
+
+			<section hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;">
+				<h3>Código HTML para exibir a página anterior</h3>
+				<pre><code rel="index.html" class="html hljs xml has-highlights" data-trim="" data-line-numbers="7,8"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-comment">&lt;!--configurações da página (não é vísivel)--&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></div></td></tr><tr class="highlight-line"><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Projeto Supervisionado<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></div></td></tr><tr class="highlight-line"><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Disciplina do módulo curso do Técnico em Desenvolvimento de Sistemas do SESI - Planalto <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></div></td></tr></tbody></table></code></pre>
+			<small class="red">
+				OBS: todo arquivo/documento HTML deve ser salvo com a extensão 
+				<b><i>.html</i></b> (<b><i>nomearquivo.html</i></b>) </small>	
+			</section>
+
+			<section hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;">
+				<h3>Anatomia de uma elemento HTML</h3>
+				<img src="./Introdução a HTML_files/tag-html.png" alt="">
+				<p class="violet">Uma página Web é formada por um conjunto de elementos</p>
+			</section>
+
+			<section data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;"><h2 id="vamos-praticar">Vamos praticar!!!</h2>
+<p>Vamos começar criando um site pessoal, um site sobre você.</p>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;"><h2 id="ferramentas-do-desenvolvedor">Ferramentas do desenvolvedor</h2>
+<ul>
+<li>Computador</li>
+<li>Navegador Web (Chrome, Firefox, etc)</li>
+<li>Editor de texto <ul>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+<li><a href="https://codepen.io/">Codepen</a> (Editor Online)</li>
+<li><a href="https://repl.it/">Repl.it</a></li>
+</ul>
+</li>
+</ul>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;"><h2 id="começando">Começando</h2>
+<ul>
+<li>Sobre o que é seu site?</li>
+<li>Quais informações você vai colocar no site (textos, imagens, etc)?</li>
+<li>Como será seu site (cor de fundo, fonte, alihamento)?</li>
+</ul>
+</section>
+
+
+			<section hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;">
+				<div class="two-column">
+					<div class="item">
+					<h3>Rascunhando seu design</h3>
+				<p class="blue">Pegue papel e caneta e faça um rascunho de como 
+					você deseja o modelo do seu site.</p>
+					</div>
+				<img class="item" src="./Introdução a HTML_files/rascunho.jpeg" alt="">
+			</div>
+			</section>
+
+			<section hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;">
+				<h2>Código HTML da minha página</h2>
+				<pre><code rel="index.html" class="html hljs xml" data-trim=""><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"pt-br"</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Rêmulo Borges<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://pbs.twimg.com/profile_images/1254857099391238144/gpdJCD7R_400x400.jpg"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Rêmulo Borges<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Formação<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Graduação:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> Sistemas de Informação<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Experência<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Programador<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Professor<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>
+   2020 - @remuloborges 
+  <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
+			</section>
+
+			<section data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;"><h2 id="atividade">Atividade</h2>
+<ol>
+<li>Faça o rascunho da sua página Web pessoal</li>
+<li>mostre o rascunho da sua página</li>
+<li>Escreva o código HTML da sua página</li>
+<li>Envie o código HTML da sua página para quimicadoaluno@gmail.com</li>
+</ol>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;"><h2 id="referências">Referências</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer">Com será o seu site?</a></li>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos">Quais ferramentas os profissionais usam?</a></li>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico">HTML Básico</a></li>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element">Elementos HTML</a></li>
+
+</ul>
+</section>
+
+			<section data-background="#b5533c" class="has-dark-background future" hidden="" aria-hidden="true" style="top: 350px; display: none;">
+				<h1 class="text-title">Introdução a HTML</h1>
+				<h2 class="contact">
+					@remuloborges
+				</h2>
+				<h1 class="text-dark">Fim!</h1>
+			</section>
+
+		</div>
+	<div class="backgrounds"><div class="slide-background present" data-background-hash="#4d7e65nullnullnullnullnullnullnullnullnull" data-loaded="true" style="background: rgb(77, 126, 101); display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" data-background-hash="#61BC88nullnullnullnullnullnullnullnullnull" style="background: rgb(97, 188, 136); display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" data-background-hash="#b5533cnullnullnullnullnullnullnullnullnull" style="background: rgb(181, 83, 60); display: none;"><div class="slide-background-content"></div></div></div><div class="progress" style="display: block;"><span style="width: 0px;"></span></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left" aria-label="previous slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-right enabled highlight" aria-label="next slide"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: block;"><a href=""><span class="slide-number-a">1</span><span class="slide-number-delimiter">/</span><span class="slide-number-b">18</span></a></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">
+				Introdução a HTML
+				
+					Prof. Rêmulo Borges 
+				
+				@remuloborges
+			</div><div id="searchinputdiv" class="searchdiv" style="position: absolute; top: 10px; right: 10px; z-index: 10; display: none;"><span><input type="search" id="searchinput" class="searchinput" style="vertical-align: top;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJiSURBVHjatFZNaxNBGH5md+Mmu92NVdKDRipSAyqCghgQD4L4cRe86UUtAQ+eFCxoa4/25EXBFi8eBE+eRPoDhB6KgiiixdAPCEkx2pjvTXadd9yNsflwuyUDD/O+u8PzzDPvzOwyx3EwyCZhwG3gAkp7MnpjgbopjsltcD4gjuXZZKeAR348MYLYTm3LzOs/y3j3JTfZxgXWXmTuwPHIc4VmoOmv5IrI53+AO2DdHLjkDWQ3GoEEVFXtXQOvkSnPWcyUceviLhwbDYv8/XIVj97kse7TodLvZXxYxrPUHkQ1ufXs3FEdybEIxucySOesoNvUgWU1cP3MkCBfTFdw9fGaAMVmRELq7LBw2Q3/FaAxxWIRpw+ZIr/7IouPqzUBiqmdHAv7EuhRAwf1er2Vy4x1jW3b2d5Jfvu5IPp7l2LYbcgCFFNb+FoJ7oBqEAqFMPNqFcmEgVMJDfMT+1tvN0pNjERlMS6QA5pFOKxiKVPFhakPeL3It+WGJUDxt2wFR+JhzI7v5ctkd8DXOZAkCYYxhO+lKm4+Xfqz/rIixBuNBl7eOYzkQQNzqX249mRl6zUgEcYkaJrGhUwBinVdh6IouPzwE6/DL5w4oLkH8y981aDf+uq6hlKpJESiUdNfDZi7/ehG9K6KfiA3pml0PLcsq+cSMTj2NL9ukc4UOmz7AZ3+crkC4mHujFvXNaMFB3bEr8xPS6p5O+jXxq4VZtaen7/PwzrntjcLUE0iHPS1Ud1cdiEJl/8WivZk0wXd7zWOMkeF8s0CcAmkNrC2nvXZDbbbN73ccYnZoH9bfgswAFzAe9/h3dbKAAAAAElFTkSuQmCC" id="searchbutton" class="searchicon" style="vertical-align: top; margin-top: -1px;"></span></div></div>
+	<script src="./Introdução a HTML_files/reveal.js.download"></script>
+	<script src="./Introdução a HTML_files/main.js.download"></script>
+
+
+</body></html>

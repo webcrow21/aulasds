@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Introdução a CSS</title>
+	<meta name="description" content="Conheça a liguagem de estilo CSS e entenda como utiliza-la para desenvolvimento de página Web.">
+	<link rel="stylesheet" href="./Introdução a CSS_files/reset.css">
+	<link rel="stylesheet" href="./Introdução a CSS_files/reveal.css">
+	<link rel="stylesheet" href="./Introdução a CSS_files/white.css" id="theme">
+	<link rel="stylesheet" href="./Introdução a CSS_files/atom-one-light.css" id="code-theme">
+	<link rel="stylesheet" href="./Introdução a CSS_files/custom.css">
+	<link rel="shortcut icon" type="image/x-icon" href="https://jesielviana.github.io/web-dev/slides/img/favicon.ico">
+<script type="text/javascript" src="./Introdução a CSS_files/marked.js.download"></script><script type="text/javascript" src="./Introdução a CSS_files/markdown.js.download"></script><script type="text/javascript" src="./Introdução a CSS_files/highlight.js.download"></script><style type="text/css" id="operaUserStyle"></style><link rel="stylesheet" type="text/css" href="./Introdução a CSS_files/paper.css"><style type="text/css"></style><script type="text/javascript" src="./Introdução a CSS_files/search.js.download"></script><script type="text/javascript" src="./Introdução a CSS_files/zoom.js.download"></script><script type="text/javascript" src="./Introdução a CSS_files/notes.js.download"></script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+
+<body style="transition: -webkit-transform 0.8s;">
+	<div class="reveal slide center has-horizontal-slides ready has-dark-background" role="application" data-transition-speed="default" data-background-transition="fade" style="">
+		<div class="settings">
+			<button class="btn-print" onclick="printPDF()">
+				<img src="./Introdução a CSS_files/print.svg" alt="print">
+			</button>
+			<button class="change-theme" onclick="changeTheme()">
+				<img src="./Introdução a CSS_files/color.svg" alt="color">
+			</button>
+		</div>
+		<div class="slides" style="width: 960px; height: 700px; zoom: 1.29737;">
+			<section data-background="#4d7e65" class="has-dark-background past" style="top: 177px; display: none;" hidden="" aria-hidden="true">
+				<h1 class="text-title">Introdução a CSS</h1>
+				<p class="text-autor">
+					Prof. Rêmulo Borges 
+				</p>
+				<h3 class="contact">@remuloborges</h3>
+			</section>
+
+			<section data-markdown="" data-markdown-parsed="true" class="past" style="top: 192.5px; display: none;" hidden="" aria-hidden="true"><h1 id="objetivos">Objetivos</h1>
+<p>Conhecer a liguagem de estilo CSS e 
+entender como utiliza-la para desenvolvimento de página Web.</p>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" class="past" style="top: 242.5px; display: none;" hidden="" aria-hidden="true"><h2 id="contexto">Contexto</h2>
+<p>Páginas Web</p>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" class="past" style="top: 188px; display: none;" hidden="" aria-hidden="true"><h2 id="problema">Problema</h2>
+<p>HTML é uma liguagem para estruturação de conteúdo, porém é muito pobre em design.
+Portanto, como criar páginas Web bonitas, que chamem atenção?</p>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" class="past" style="top: 257px; display: none;" hidden="" aria-hidden="true"><h1 id="cascading-style-sheets---css">Cascading Style Sheets - CSS</h1>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" class="past" style="top: 215px; display: none;" hidden="" aria-hidden="true"><h2 id="o-css-formata-a-informação-entregue-pelo-html">O CSS formata a informação entregue pelo HTML.</h2>
+<p>Essa informação pode ser qualquer coisa: imagem, texto, vídeo, áudio ou qualquer outro elemento criado. </p>
+</section>
+
+			<section class="past" style="top: 7px; display: none;" hidden="" aria-hidden="true">
+				<h2>Sintaxe do CSS</h2>
+				<img src="./Introdução a CSS_files/css-sintaxe.png" alt="">
+				<small>{} (chaves) determina o inicio e o fim de um bloco</small>
+				<small>: (dois pontos) separa a propriedade do valor</small><br>
+				<small>; (ponto e vírgula) encerra uma declaração</small><br>
+				<small class="red">Ambos são obrigatórios</small>
+			</section>
+
+			<section data-markdown="" data-markdown-parsed="true" class="past" style="top: 188px; display: none;" hidden="" aria-hidden="true"><h2 id="vamos-praticar">Vamos praticar!!!</h2>
+<p>Vamos começar melhorando o design visual da página criada na aula anterior<br></section>
+
+			<section class="past" style="top: 215px; display: none;" hidden="" aria-hidden="true">
+				<h2>O que vamos fazer?</h2>
+				<p class="blue">Vamos deixar a página com a cor de fundo <b>verde</b> e o texto <b>branco</b></p>
+			
+			</section>
+
+			<section class="past" style="top: 209px; display: none;" hidden="" aria-hidden="true">
+				<h2>Crie um arquivo CSS com o código abaixo</h2>
+				<pre><code rel="estilo.html" class="css hljs" data-trim=""><span class="hljs-selector-tag">body</span> {
+ <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#4d7e65</span>;
+ <span class="hljs-attribute">color</span>: white;
+}</code></pre>
+			</section>
+
+			<section class="past" style="top: 47px; display: none;" hidden="" aria-hidden="true">
+				<h2>Como integrar o CSS ao HTML</h2>
+				<p>Importe o arquivo <b><i class="green">estilo.css</i></b> para dentro da página HTML. 
+					A importação deve ser feita dentro da tag <i>&lt;head&gt;</i> do arquivo HTML, conforme abaixo.</p>
+				<pre><code rel="index.html" class="css hljs has-highlights" data-trim="" data-line-numbers="5"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">&lt;!<span class="hljs-selector-tag">DOCTYPE</span> <span class="hljs-selector-tag">html</span>&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">&lt;<span class="hljs-selector-tag">html</span>&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> &lt;<span class="hljs-selector-tag">head</span>&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  ...</div></td></tr><tr class="highlight-line"><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  &lt;<span class="hljs-selector-tag">link</span> <span class="hljs-selector-tag">href</span>="<span class="hljs-selector-tag">estilo</span><span class="hljs-selector-class">.css</span>" <span class="hljs-selector-tag">rel</span>="<span class="hljs-selector-tag">stylesheet</span>"&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> &lt;/<span class="hljs-selector-tag">head</span>&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> &lt;<span class="hljs-selector-tag">body</span>&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  ...</div></td></tr></tbody></table></code></pre>
+			</section>
+
+			<section class="past" style="top: 77.5px; display: none;" hidden="" aria-hidden="true">
+				<h3>Deixando nossa página mais bonita com CSS</h3>
+				<pre><code rel="estilo.html" class="css hljs" data-trim=""><span class="hljs-selector-tag">body</span> {
+ <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#4d7e65</span>; <span class="hljs-comment">/* cor de fundo  */</span>
+ <span class="hljs-attribute">color</span>: white; <span class="hljs-comment">/* cor da fonte  */</span>
+ <span class="hljs-attribute">font-family</span>: Verdana, sans-serif; 	<span class="hljs-comment">/* fonte do texto  */</span>
+ <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>; <span class="hljs-comment">/* tamanho da fonte  */</span>
+}
+
+<span class="hljs-selector-tag">header</span> {
+ <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>; <span class="hljs-comment">/* largura do elemento  */</span>
+ <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>; <span class="hljs-comment">/* altura do elemento  */</span>
+ <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>; <span class="hljs-comment">/* largura, tipo e cor da borda do elemento */</span>
+}
+
+<span class="hljs-selector-tag">header</span> <span class="hljs-selector-tag">img</span>{
+ <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
+ <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
+}
+
+<span class="hljs-selector-tag">main</span>{
+ <span class="hljs-attribute">min-height</span>: <span class="hljs-number">400px</span>;
+}
+
+<span class="hljs-selector-tag">footer</span>{
+ <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#fff</span>; <span class="hljs-comment">/* largura, tipo e cor da borda do elemento */</span>
+ <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+ <span class="hljs-attribute">text-align</span>: center;
+}</code></pre>
+			</section>
+
+			<section data-markdown="" data-markdown-parsed="true" class="past" style="top: 143px; display: block;" hidden="" aria-hidden="true"><h2 id="atividade">Atividade</h2>
+<ol>
+<li>Escreva o código CSS da sua página conforme o layout do seu rascunho</li>
+<li>Integre o código CSS com a código HTML</li>
+<li>Envie o código CSS e o código HTML da sua página para quimicadoaluno@gmail.com</li>
+</ol>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" class="past" style="top: 68px; display: block;" hidden="" aria-hidden="true"><h2 id="referências">Referências</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Learn/CSS/First_steps/O_que_e_CSS">O que é CSS</a></li>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/sintaxe">Sintaxe do CSS</a></li>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Learn/CSS/First_steps/Iniciando">Iniciando com CSS</a></li>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Reference">Propriedades CSS</a></li>
+<li><a href="https://www.w3schools.com/css/default.asp">Propriedades CSS (em inglês)</a></li>
+</ul>
+</section>
+			
+			<section data-background="#b5533c" class="has-dark-background present" style="top: 133.5px; display: block;">
+				<h1 class="text-title">Introdução a CSS</h1>
+				<h2 class="contact">
+					@remuloborges
+				</h2>
+				<h1 class="text-dark">Fim!</h1>
+			</section>
+		</div>
+	<div class="backgrounds"><div class="slide-background past" data-background-hash="#4d7e65nullnullnullnullnullnullnullnullnull" data-loaded="true" style="background: rgb(77, 126, 101); display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background present" data-background-hash="#b5533cnullnullnullnullnullnullnullnullnull" style="background: rgb(181, 83, 60); display: block;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="progress" style="display: block;"><span style="width: 1866px;"></span></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button><button class="navigate-right" aria-label="next slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: block;"><a href="https://jesielviana.github.io/web-dev/slides/aula-03#/14"><span class="slide-number-a">15</span><span class="slide-number-delimiter">/</span><span class="slide-number-b">15</span></a></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">
+				Introdução a CSS
+				
+					@remuloborges
+				
+				Fim!
+			</div><div id="searchinputdiv" class="searchdiv" style="position: absolute; top: 10px; right: 10px; z-index: 10; display: none;"><span><input type="search" id="searchinput" class="searchinput" style="vertical-align: top;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJiSURBVHjatFZNaxNBGH5md+Mmu92NVdKDRipSAyqCghgQD4L4cRe86UUtAQ+eFCxoa4/25EXBFi8eBE+eRPoDhB6KgiiixdAPCEkx2pjvTXadd9yNsflwuyUDD/O+u8PzzDPvzOwyx3EwyCZhwG3gAkp7MnpjgbopjsltcD4gjuXZZKeAR348MYLYTm3LzOs/y3j3JTfZxgXWXmTuwPHIc4VmoOmv5IrI53+AO2DdHLjkDWQ3GoEEVFXtXQOvkSnPWcyUceviLhwbDYv8/XIVj97kse7TodLvZXxYxrPUHkQ1ufXs3FEdybEIxucySOesoNvUgWU1cP3MkCBfTFdw9fGaAMVmRELq7LBw2Q3/FaAxxWIRpw+ZIr/7IouPqzUBiqmdHAv7EuhRAwf1er2Vy4x1jW3b2d5Jfvu5IPp7l2LYbcgCFFNb+FoJ7oBqEAqFMPNqFcmEgVMJDfMT+1tvN0pNjERlMS6QA5pFOKxiKVPFhakPeL3It+WGJUDxt2wFR+JhzI7v5ctkd8DXOZAkCYYxhO+lKm4+Xfqz/rIixBuNBl7eOYzkQQNzqX249mRl6zUgEcYkaJrGhUwBinVdh6IouPzwE6/DL5w4oLkH8y981aDf+uq6hlKpJESiUdNfDZi7/ehG9K6KfiA3pml0PLcsq+cSMTj2NL9ukc4UOmz7AZ3+crkC4mHujFvXNaMFB3bEr8xPS6p5O+jXxq4VZtaen7/PwzrntjcLUE0iHPS1Ud1cdiEJl/8WivZk0wXd7zWOMkeF8s0CcAmkNrC2nvXZDbbbN73ccYnZoH9bfgswAFzAe9/h3dbKAAAAAElFTkSuQmCC" id="searchbutton" class="searchicon" style="vertical-align: top; margin-top: -1px;"></span></div></div>
+	<script src="./Introdução a CSS_files/reveal.js.download"></script>
+	<script src="./Introdução a CSS_files/main.js.download"></script>
+
+</body></html>

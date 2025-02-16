@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Git e Github</title>
+	<link rel="stylesheet" href="./Git e Github_files/reset.css">
+	<link rel="stylesheet" href="./Git e Github_files/reveal.css">
+	<link rel="stylesheet" href="./Git e Github_files/white.css" id="theme">
+	<link rel="stylesheet" href="./Git e Github_files/atom-one-light.css" id="code-theme">
+	<link rel="stylesheet" href="./Git e Github_files/custom.css">
+	<link rel="shortcut icon" type="image/x-icon" href="https://jesielviana.github.io/web-dev/slides/img/favicon.ico">
+<script type="text/javascript" src="./Git e Github_files/marked.js.download"></script><script type="text/javascript" src="./Git e Github_files/markdown.js.download"></script><script type="text/javascript" src="./Git e Github_files/highlight.js.download"></script><style type="text/css" id="operaUserStyle"></style><link rel="stylesheet" type="text/css" href="./Git e Github_files/paper.css"><style type="text/css"></style><script type="text/javascript" src="./Git e Github_files/search.js.download"></script><script type="text/javascript" src="./Git e Github_files/zoom.js.download"></script><script type="text/javascript" src="./Git e Github_files/notes.js.download"></script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+
+<body style="transition: -webkit-transform 0.8s;">
+	<div class="reveal slide center has-horizontal-slides ready has-dark-background" role="application" data-transition-speed="default" data-background-transition="fade" style="">
+		<div class="settings">
+			<button class="btn-print" onclick="printPDF()">
+				<img src="./Git e Github_files/print.svg" alt="print">
+			</button>
+			<button class="change-theme" onclick="changeTheme()">
+				<img src="./Git e Github_files/color.svg" alt="color">
+			</button>
+		</div>
+		<div class="slides" style="width: 960px; height: 700px; zoom: 1.29737;">
+			<section data-background="#4d7e65" class="has-dark-background past" style="top: 177px; display: none;" hidden="" aria-hidden="true">
+				<h1 class="text-title">Git e Github</h1>
+				<p class="text-autor">
+					Prof. Rêmulo Borges
+				</p>
+				<h3 class="contact">@remuloborges</h3>
+			</section>
+
+			<section data-markdown="" data-markdown-parsed="true" class="past" style="top: 37.5px; display: none;" hidden="" aria-hidden="true"><h2 id="contexto">Contexto</h2>
+<ul>
+<li>O desenvolvimento de software geralmente é realizado em equipe,
+com a colaboração de vários desenvolvedores,
+que em muitos casos estão trabalhando em um mesmo projetos de
+locais e horários diferentes uns dos outros;</li>
+<li>Sofware é desenvolvido seguindo o sistema de versões, 1.0, 1.1, 2.0, etc;</li>
+<li>Software precisa de manutenção.</li>
+</ul>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" class="past" style="top: 0px; display: none;" hidden="" aria-hidden="true"><h2 id="problema">Problema</h2>
+<ul>
+<li>Como juntar o código de diversos programadores em um mesmo projeto?</li>
+<li>E se mais de um programador alterar um mesmo arquivo?</li>
+<li>Como separara o código da versão que está em produção da versão que está em desenvolviemnto?</li>
+<li>Como manter um histórico de modificações do software, do arquivo?</li>
+<li>Como Gerenciar as versões?</li>
+</ul>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" class="past" style="top: 78.5px; display: none;" hidden="" aria-hidden="true"><h2 id="git">Git</h2>
+<p>Sistema de controle de versão que permite integrar as modificações de diversos colabordores em um única base de
+código, fazendo o controle de modificações e conflitos. Além disso, cria todo histórico de alterações no código
+do projeto, permitindo facilmente voltar para qualquer ponto para saber como o código estava naquele momento
+[1].</p>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" class="past" style="top: 133px; display: none;" hidden="" aria-hidden="true"><h2 id="git">Git</h2>
+<p>É um sistema open-source de controle de versão, sendo o mais utilizado pelos desenvolvedores atualmente. Foi
+desenvolvido em 2005 por Linus Torvalds, o famoso criador do kernel do sistema operacional Linux [2].
+<a href="https://github.com/git/git">Repositório do Git</a></p>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" class="past" style="top: 41.5px; display: none;" hidden="" aria-hidden="true"><h2 id="github">Github</h2>
+<p>GitHub é uma plataforma de hospedagem de código (repositórios Git) para controle de versão e colaboração. Ele
+permite que você e outras pessoas trabalhem juntos em projetos de qualquer lugar [4].</p>
+<p>Além de servir como hospedagem, o Github possui muitas integrações com serviços que auxiliam no deploy da
+aplicação através de integração contínua [3].</p>
+</section>
+
+			<section data-markdown="" data-background="orange" data-markdown-parsed="true" class="has-light-background past" style="top: 257px; display: none;" hidden="" aria-hidden="true"><h1 id="principais-comandos">Principais Comandos</h1>
+</section>
+
+			<section class="past" style="top: 0px; display: none;" hidden="" aria-hidden="true">
+				<h2>init e clone</h2> 
+				<p>Para começar a usar o git para gerenciar as versões de um sistema devemos executar um dos seguintes comandos:
+				init ou clone [5].</p>
+				<p>O comando <b><i>init</i></b> cria um repositório vazio.</p>
+				<pre><code class="hljs nginx"><span class="hljs-attribute">git</span> init</code></pre>
+				<p>O comando <b><i>clone</i></b>, clona(copia código e histórico) para o diretório corrente um repositório armazenado
+				remotamente, por exemplo: um repositório do GitHub.</p>
+				<pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/NOME-USER/NOME-REPO</code></pre>
+			</section>
+
+			<section class="past" style="top: 3px; display: none;" hidden="" aria-hidden="true">
+				<h2>add e commit</h2>
+				<pre><code class="hljs routeros">git <span class="hljs-builtin-name">add</span> <span class="hljs-string">'arquivo'</span> ou git <span class="hljs-builtin-name">add</span> . =&gt; <span class="hljs-string">'.'</span> = todos os aquivos
+git commit -m <span class="hljs-string">"msg"</span>
+				</code></pre>
+				<img src="./Git e Github_files/add.svg" alt="Fluxo Git de add e commit">
+				<p><small>Fonte: [5]</small></p>
+			</section>
+
+			<section class="past" style="top: 0px; display: none;" hidden="" aria-hidden="true">
+				<h2>push e pull</h2>
+				<div class="two-column">
+					<div class="item">
+				<p>O comando <b><i>push</i></b> copia os commits mais recentes do repositório local para o repositório remoto.</p>
+				<p>Já para atualizar seu repositório local, os outros desenvolvedores do time devem executar um comando <b><i>pull</i></b> [5].</p>
+				</div>
+				<div class="item">
+				<img style="max-width: 500px;" src="./Git e Github_files/push-pull.svg" alt="Fluxo Git de pull e push">
+				<small>Fonte: [5]</small> 
+			</div>
+			</div>
+			</section>
+
+			<section data-markdown="" data-markdown-parsed="true" class="past" style="top: 182px; display: none;" hidden="" aria-hidden="true"><h2 id="glossário-git">Glossário Git</h2>
+<ul>
+<li><strong>Branch</strong> - ramificação</li>
+<li><strong>Tag</strong> -  é uma marcação que aponta para um momento específico no histórico do Git.</li>
+</ul>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" class="past" style="top: 242.5px; display: block;" hidden="" aria-hidden="true"><h2 id="lista-de-comandos-git">Lista de comandos Git</h2>
+<p><a href="https://gist.github.com/jesielviana/79b444d60933248e649d45e4ebbf0fb5">Link</a></p>
+</section>
+
+			<section data-markdown="" data-markdown-parsed="true" class="past" style="top: 88.5px; display: block;" hidden="" aria-hidden="true"><h2 id="referências">Referências.</h2>
+<ol>
+<li><a href="https://git-scm.com/book/pt-br/v2">https://git-scm.com/book/pt-br/v2</a></li>
+<li><a href="https://www.atlassian.com/br/git/tutorials/what-is-git">https://www.atlassian.com/br/git/tutorials/what-is-git</a></li>
+<li><a href="https://blog.rocketseat.com.br/iniciando-com-git-github/">https://blog.rocketseat.com.br/iniciando-com-git-github/</a></li>
+<li><a href="https://guides.github.com/activities/hello-world/">https://guides.github.com/activities/hello-world/</a></li>
+<li><a href="https://engsoftmoderna.info/capAp.html">https://engsoftmoderna.info/capAp.html</a></li>
+</ol>
+</section>
+
+			<section data-background="#b5533c" class="has-dark-background present" style="top: 133.5px; display: block;">
+				<h1 class="text-title">Git e Github</h1>
+				<h2 class="contact">
+					@remuloborges
+				</h2>
+				<h1 class="text-dark">Fim!</h1>
+			</section>
+		</div>
+	<div class="backgrounds"><div class="slide-background past" data-background-hash="#4d7e65nullnullnullnullnullnullnullnullnull" data-loaded="true" style="background: rgb(77, 126, 101); display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" data-background-hash="orangenullnullnullnullnullnullnullnullnull" style="background: orange; display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background present" data-background-hash="#b5533cnullnullnullnullnullnullnullnullnull" style="background: rgb(181, 83, 60); display: block;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="progress" style="display: block;"><span style="width: 1866px;"></span></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button><button class="navigate-right" aria-label="next slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: block;"><a href="https://jesielviana.github.io/web-dev/slides/aula-04#/13"><span class="slide-number-a">14</span><span class="slide-number-delimiter">/</span><span class="slide-number-b">14</span></a></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">
+				Git e Github
+				
+					@remuloborges
+				
+				Fim!
+			</div><div id="searchinputdiv" class="searchdiv" style="position: absolute; top: 10px; right: 10px; z-index: 10; display: none;"><span><input type="search" id="searchinput" class="searchinput" style="vertical-align: top;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJiSURBVHjatFZNaxNBGH5md+Mmu92NVdKDRipSAyqCghgQD4L4cRe86UUtAQ+eFCxoa4/25EXBFi8eBE+eRPoDhB6KgiiixdAPCEkx2pjvTXadd9yNsflwuyUDD/O+u8PzzDPvzOwyx3EwyCZhwG3gAkp7MnpjgbopjsltcD4gjuXZZKeAR348MYLYTm3LzOs/y3j3JTfZxgXWXmTuwPHIc4VmoOmv5IrI53+AO2DdHLjkDWQ3GoEEVFXtXQOvkSnPWcyUceviLhwbDYv8/XIVj97kse7TodLvZXxYxrPUHkQ1ufXs3FEdybEIxucySOesoNvUgWU1cP3MkCBfTFdw9fGaAMVmRELq7LBw2Q3/FaAxxWIRpw+ZIr/7IouPqzUBiqmdHAv7EuhRAwf1er2Vy4x1jW3b2d5Jfvu5IPp7l2LYbcgCFFNb+FoJ7oBqEAqFMPNqFcmEgVMJDfMT+1tvN0pNjERlMS6QA5pFOKxiKVPFhakPeL3It+WGJUDxt2wFR+JhzI7v5ctkd8DXOZAkCYYxhO+lKm4+Xfqz/rIixBuNBl7eOYzkQQNzqX249mRl6zUgEcYkaJrGhUwBinVdh6IouPzwE6/DL5w4oLkH8y981aDf+uq6hlKpJESiUdNfDZi7/ehG9K6KfiA3pml0PLcsq+cSMTj2NL9ukc4UOmz7AZ3+crkC4mHujFvXNaMFB3bEr8xPS6p5O+jXxq4VZtaen7/PwzrntjcLUE0iHPS1Ud1cdiEJl/8WivZk0wXd7zWOMkeF8s0CcAmkNrC2nvXZDbbbN73ccYnZoH9bfgswAFzAe9/h3dbKAAAAAElFTkSuQmCC" id="searchbutton" class="searchicon" style="vertical-align: top; margin-top: -1px;"></span></div></div>
+	<script src="./Git e Github_files/reveal.js.download"></script>
+	<script src="./Git e Github_files/main.js.download"></script>
+
+
+</body></html>
