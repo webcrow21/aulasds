@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Lógicos em Java - Apresentação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            width: 90%;
+            max-width: 900px;
+            height: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        .slide {
+            display: none;
+            padding: 20px;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        .slide.active {
+            display: block;
+        }
+        h1 {
+            color: #003260;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #003260;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        p, ul {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+        }
+        .code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+        th {
+            background-color: #00b0f0;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        .navigation {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #003260;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .footer {
+            font-size: 12px;
+            color: #595959;
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        @media (max-width: 800px) {
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            p, ul, .code, th, td {
+                font-size: 12px;
+            }
+            button {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Slide 1: Introdução -->
+        <div class="slide active" id="slide-1">
+            <h1>Operadores Lógicos em Java</h1>
+            <p>Hoje, vamos aprender como usar operadores lógicos para combinar condições em programas com <code>if</code>.</p>
+            <ul>
+                <li>Operadores lógicos: <strong>&&</strong> (E), <strong>||</strong> (OU), <strong>!</strong> (NÃO).</li>
+                <li>Usados para tomar decisões mais complexas.</li>
+                <li>Vocês verão esses operadores nos exercícios de hoje!</li>
+            </ul>
+            <p><strong>Exemplo simples:</strong></p>
+            <pre class="code">if (idade >= 18 && temIngresso == 's') {
+    System.out.println("Entrada liberada!");
+}</pre>
+            <div class="footer">Vamos explorar cada operador nos próximos slides!</div>
+        </div>
+
+        <!-- Slide 2: Operador && (E/AND) -->
+        <div class="slide" id="slide-2">
+            <h1>Operador && (E/AND)</h1>
+            <h2>Descrição</h2>
+            <p>Retorna <strong>true</strong> se <strong>AMBAS</strong> as condições forem verdadeiras.</p>
+            <h2>Exemplo em Java</h2>
+            <pre class="code">int idade = 20;
+char temIngresso = 's';
+if (idade >= 18 && temIngresso == 's') {
+    System.out.println("Entrada liberada!");
+}</pre>
+            <p><strong>Saída:</strong> Entrada liberada!</p>
+            <h2>Contexto do Dia a Dia</h2>
+            <p>Precisa de <strong>dinheiro</strong> E <strong>carteira</strong> para comprar algo na loja.</p>
+            <div class="footer">Use && quando todas as condições devem ser atendidas!</div>
+        </div>
+
+        <!-- Slide 3: Operador || (OU/OR) -->
+        <div class="slide" id="slide-3">
+            <h1>Operador || (OU/OR)</h1>
+            <h2>Descrição</h2>
+            <p>Retorna <strong>true</strong> se <strong>PELO MENOS UMA</strong> condição for verdadeira.</p>
+            <h2>Exemplo em Java</h2>
+            <pre class="code">double nota = 6.5;
+int frequencia = 80;
+if (nota >= 7 || frequencia >= 75) {
+    System.out.println("Aprovado!");
+}</pre>
+            <p><strong>Saída:</strong> Aprovado!</p>
+            <h2>Contexto do Dia a Dia</h2>
+            <p>Pode sair se for <strong>sábado</strong> OU <strong>domingo</strong>.</p>
+            <div class="footer">Use || quando basta uma condição ser verdadeira!</div>
+        </div>
+
+        <!-- Slide 4: Operador ! (NÃO/NOT) -->
+        <div class="slide" id="slide-4">
+            <h1>Operador ! (NÃO/NOT)</h1>
+            <h2>Descrição</h2>
+            <p>Inverte o valor lógico: <strong>true</strong> vira <strong>false</strong>, e <strong>false</strong> vira <strong>true</strong>.</p>
+            <h2>Exemplo em Java</h2>
+            <pre class="code">boolean estaChovendo = false;
+if (!estaChovendo) {
+    System.out.println("Pode passear!");
+}</pre>
+            <p><strong>Saída:</strong> Pode passear!</p>
+            <h2>Contexto do Dia a Dia</h2>
+            <p>Se <strong>NÃO está chovendo</strong>, leva o cachorro para passear.</p>
+            <div class="footer">Use ! para inverter uma condição!</div>
+        </div>
+
+        <!-- Slide 5: Tabela Resumida -->
+        <div class="slide" id="slide-5">
+            <h1>Tabela de Operadores Lógicos</h1>
+            <table>
+                <tr>
+                    <th>Operador</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Exemplo em Java</th>
+                    <th>Contexto do Dia a Dia</th>
+                </tr>
+                <tr>
+                    <td>&&</td>
+                    <td>E (AND)</td>
+                    <td>Verdadeiro se AMBAS as condições são verdadeiras.</td>
+                    <td class="code">if (idade >= 18 && temIngresso == 's') {<br>    System.out.println("Entrada liberada!");<br>}</td>
+                    <td>Precisa de dinheiro E carteira para comprar.</td>
+                </tr>
+                <tr>
+                    <td>||</td>
+                    <td>OU (OR)</td>
+                    <td>Verdadeiro se PELO MENOS UMA condição é verdadeira.</td>
+                    <td class="code">if (nota >= 7 || frequencia >= 75) {<br>    System.out.println("Aprovado!");<br>}</td>
+                    <td>Pode sair se é sábado OU domingo.</td>
+                </tr>
+                <tr>
+                    <td>!</td>
+                    <td>NÃO (NOT)</td>
+                    <td>Inverte o valor: verdadeiro vira falso, falso vira verdadeiro.</td>
+                    <td class="code">if (!estaChovendo) {<br>    System.out.println("Pode passear!");<br>}</td>
+                    <td>Se NÃO está chovendo, leva o guarda-chuva.</td>
+                </tr>
+            </table>
+            <div class="footer">Use esses operadores nos exercícios de hoje, como o Guardião do Jardim!</div>
+        </div>
+
+        <!-- Navegação -->
+        <div class="navigation">
+            <button onclick="prevSlide()" id="prevBtn">Anterior</button>
+            <button onclick="nextSlide()" id="nextBtn">Próximo</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 5;
+
+        function showSlide(slideNumber) {
+            document.querySelectorAll('.slide').forEach(slide => slide.classList.remove('active'));
+            document.getElementById(`slide-${slideNumber}`).classList.add('active');
+            document.getElementById('prevBtn').disabled = slideNumber === 1;
+            document.getElementById('nextBtn').disabled = slideNumber === totalSlides;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

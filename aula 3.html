@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de Repetição em Java - Apresentação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            width: 90%;
+            max-width: 900px;
+            height: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        .slide {
+            display: none;
+            padding: 20px;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        .slide.active {
+            display: block;
+        }
+        h1 {
+            color: #003260;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #003260;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        p, ul {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+        }
+        .code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+        th {
+            background-color: #00b0f0;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        .navigation {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #003260;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .footer {
+            font-size: 12px;
+            color: #595959;
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        @media (max-width: 800px) {
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
+            p, ul, .code, th, td { font-size: 12px; }
+            button { padding: 8px 15px; font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Slide 1: Introdução -->
+        <div class="slide active" id="slide-1">
+            <h1>Estruturas de Repetição em Java</h1>
+            <p>Hoje, vamos aprender a usar <code>while</code> e <code>do-while</code> para repetir blocos de código com base em condições.</p>
+            <ul>
+                <li>Estruturas: <strong>while</strong> e <strong>do-while</strong>.</li>
+                <li>Usadas para automatizar tarefas repetitivas.</li>
+                <li>Combinam com <code>if</code> e operadores lógicos!</li>
+            </ul>
+            <p><strong>Exemplo simples:</strong></p>
+            <pre class="code">int contador = 1;
+while (contador <= 5) {
+    System.out.println("Contagem: " + contador);
+    contador++;
+}</pre>
+            <div class="footer">Vamos explorar cada estrutura nos próximos slides!</div>
+        </div>
+
+        <!-- Slide 2: while -->
+        <div class="slide" id="slide-2">
+            <h1>Estrutura while</h1>
+            <h2>Descrição</h2>
+            <p>Repete um bloco enquanto a condição for <strong>true</strong>. Verifica a condição antes de executar.</p>
+            <h2>Exemplo em Java</h2>
+            <pre class="code">int saldo = 10;
+while (saldo > 0) {
+    System.out.println("Saldo: " + saldo);
+    saldo--;
+}</pre>
+            <p><strong>Saída:</strong><br>Saldo: 10<br>Saldo: 9<br>...</p>
+            <h2>Contexto do Dia a Dia</h2>
+            <p>Continue regando as plantas enquanto o balde tiver água.</p>
+            <div class="footer">Use while para repetições com condição inicial!</div>
+        </div>
+
+        <!-- Slide 3: do-while -->
+        <div class="slide" id="slide-3">
+            <h1>Estrutura do-while</h1>
+            <h2>Descrição</h2>
+            <p>Executa o bloco pelo menos uma vez e repete enquanto a condição for <strong>true</strong>.</p>
+            <h2>Exemplo em Java</h2>
+            <pre class="code">int tentativas = 0;
+do {
+    System.out.println("Tentativa " + (tentativas + 1));
+    tentativas++;
+} while (tentativas < 3);</pre>
+            <p><strong>Saída:</strong><br>Tentativa 1<br>Tentativa 2<br>Tentativa 3</p>
+            <h2>Contexto do Dia a Dia</h2>
+            <p>Tente abrir a porta pelo menos uma vez, e continue se a chave não funcionar.</p>
+            <div class="footer">Use do-while quando precisa executar pelo menos uma vez!</div>
+        </div>
+
+        <!-- Slide 4: Comparação -->
+        <div class="slide" id="slide-4">
+            <h1>while vs. do-while</h1>
+            <h2>Diferenças</h2>
+            <ul>
+                <li><strong>while</strong>: Verifica a condição antes. Pode não executar.</li>
+                <li><strong>do-while</strong>: Executa pelo menos uma vez, verifica depois.</li>
+            </ul>
+            <h2>Exemplo Comparativo</h2>
+            <pre class="code">int x = 0;
+// while
+while (x > 0) {
+    System.out.println("while: " + x);
+}
+// do-while
+do {
+    System.out.println("do-while: " + x);
+} while (x > 0);</pre>
+            <p><strong>Saída:</strong><br>do-while: 0</p>
+            <div class="footer">Escolha a estrutura com base na necessidade de execução inicial!</div>
+        </div>
+
+        <!-- Slide 5: Tabela Resumida -->
+        <div class="slide" id="slide-5">
+            <h1>Tabela de Estruturas de Repetição</h1>
+            <table>
+                <tr>
+                    <th>Estrutura</th>
+                    <th>Descrição</th>
+                    <th>Exemplo em Java</th>
+                    <th>Contexto do Dia a Dia</th>
+                </tr>
+                <tr>
+                    <td>while</td>
+                    <td>Repete enquanto a condição for true. Verifica antes.</td>
+                    <td class="code">int saldo = 10;<br>while (saldo > 0) {<br>    System.out.println("Saldo: " + saldo);<br>    saldo--;<br>}</td>
+                    <td>Continue regando enquanto o balde tiver água.</td>
+                </tr>
+                <tr>
+                    <td>do-while</td>
+                    <td>Executa pelo menos uma vez, repete se condição for true.</td>
+                    <td class="code">int tentativas = 0;<br>do {<br>    System.out.println("Tentativa " + (tentativas + 1));<br>    tentativas++;<br>} while (tentativas < 3);</td>
+                    <td>Tente abrir a porta pelo menos uma vez, continue se necessário.</td>
+                </tr>
+            </table>
+            <div class="footer">Use essas estruturas nos exercícios de hoje!</div>
+        </div>
+
+        <!-- Navegação -->
+        <div class="navigation">
+            <button onclick="prevSlide()" id="prevBtn">Anterior</button>
+            <button onclick="nextSlide()" id="nextBtn">Próximo</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 5;
+
+        function showSlide(slideNumber) {
+            document.querySelectorAll('.slide').forEach(slide => slide.classList.remove('active'));
+            document.getElementById(`slide-${slideNumber}`).classList.add('active');
+            document.getElementById('prevBtn').disabled = slideNumber === 1;
+            document.getElementById('nextBtn').disabled = slideNumber === totalSlides;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
